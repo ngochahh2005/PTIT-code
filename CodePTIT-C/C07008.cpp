@@ -1,17 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
-struct dathuc{
-	int cs, mu;
-};
-
-int bSearch(struct dathuc a[], int l, int r, int x) {
-	int mid = (l+r)/2;
-	if (a[mid].mu == x) return mid;
-	if (a[mid].mu < x) return bSearch(a, mid, r, x);
-	if (a[mid].mu > x) return bSearch(a, l, mid, x);
-	return -1; 
-}
+#include <ctype.h>
 
 int main() {
 	int t;
@@ -21,48 +10,60 @@ int main() {
 		char s1[10005], s2[10005];
 		gets(s1);
 		gets(s2);
-		struct dathuc a[10005], b[10005];
-		int n1 = 0, n2 = 0;
+		int bac = 0, hs = 0;
+		int f[10005];
+		for (int i = 0; i < 10001; i++) f[i] = 0;
 		char *tok = strtok(s1, " ");
 		while (tok != NULL) {
-			int l = strlen(tok);
-			int base = 0, exp = 0, kt = 0;
-			if (tok[0] >= '0' && tok[0] <= '9') {
-				for (int i = 0; i < l; i++) {
-					if (tok[i] >= '0' && tok[i] <= '9') {
-						if (kt == 0) {
-							base = base*10 + tok[i] - '0';
-						} else {
-							exp = exp*10 + tok[i] - '0';
-						} 
-					} else kt = 1;
-				}
-				a[n1].cs = base;
-				a[n1++].mu = exp; 
+			int check = 0;
+			if (strcmp(tok, "+") == 0) {
+				tok = strtok(NULL, " ");
+				continue;
 			}
+			for (int i = 0; i < strlen(tok); i++) {
+				if (isdigit(tok[i])) {
+					if (check == 0) {
+						hs = hs*10 + tok[i]-'0';
+					} else {
+						bac = bac*10 + tok[i]-'0';
+					}
+				} else check = 1;
+			}
+			f[bac] = hs;
+			// printf("%d	%d\n", bac, hs);
+			bac = 0;
+			hs = 0;
 			tok = strtok(NULL, " ");
 		}
 		tok = strtok(s2, " ");
 		while (tok != NULL) {
-			int l = strlen(tok);
-			int base = 0, exp = 0, kt = 0;
-			if (tok[0] >= '0' && tok[0] <= '9') {
-				for (int i = 0; i < l; i++) {
-					if (tok[i] >= '0' && tok[i] <= '9') {
-						if (kt == 0) {
-							base = base*10 + tok[i] - '0';
-						} else {
-							exp = exp*10 + tok[i] - '0';
-						} 
-					} else kt = 1;
-				}
-				b[n2].cs = base;
-				b[n2++].mu = exp; 
+			int check = 0;
+			if (strcmp(tok, "+") == 0) {
+				tok = strtok(NULL, " ");
+				continue;
 			}
+			for (int i = 0; i < strlen(tok); i++) {
+				if (isdigit(tok[i])) {
+					if (check == 0) {
+						hs = hs*10 + tok[i]-'0';
+					} else {
+						bac = bac*10 + tok[i]-'0';
+					}
+				} else check = 1;
+			}
+			f[bac] += hs;
+			bac = 0;
+			hs = 0;
 			tok = strtok(NULL, " ");
 		}
-		for (int i = 0; i < n2; i++) {
-			printf("%d	%d\n", b[i].cs, b[i].mu);
+		int check = 0;
+		for (int i = 10000; i >= 0; i--) {
+			if (f[i] != 0) {
+				if (check == 0) check = 1;
+				else printf(" + ");
+				printf("%d*x^%d", f[i], i);
+			}
 		}
+		printf("\n");
 	}
 }
