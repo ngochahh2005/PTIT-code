@@ -12,25 +12,23 @@ int main() {
 	for (int o = 1; o <= t; o++) {
 		int n, m;
 		scanf("%d%d", &n, &m);
-		int x = n*m;
-		int a[x+5];
-		for (int i = 0; i < x; i++) {
-			scanf("%d", &a[i]);
-		}
-		for (int i = 0; i < x - 1; i++) {
-			for (int j = i+1; j < x; j++) {
-				if (a[j] < a[i]) swap(&a[i], &a[j]);
+		int a[n][m];
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				scanf("%d", &a[i][j]);
 			}
 		}
-		int cnt = 0;
 		printf("Test %d:\n", o);
-		for (int i = 0; i < x; i++) {
-			printf("%d ", a[i]);
-			cnt++;
-			if (cnt == m) {
-				printf("\n");
-				cnt = 0;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				for (int k = i; k < n; k++) {
+					for (int l = j; l < m; l++) {
+						if (a[i][j] > a[k][l]) swap(&a[i][j], &a[k][l]);
+					}
+				}
+				printf("%d ", a[i][j]);
 			}
+			printf("\n");
 		}
 	}
 }

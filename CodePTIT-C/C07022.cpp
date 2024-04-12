@@ -3,7 +3,7 @@
 struct sinhVien {
 	int id;
 	char name[105];
-	float d1, d2, d3, d;
+	float d1, d2, d3;
 };
 
 struct sinhVien sv[1005];
@@ -14,8 +14,7 @@ void firstChoice(int n) {
 		getchar();
 		gets(sv[i].name);
 		scanf("%f%f%f", &sv[i].d1, &sv[i].d2, &sv[i].d3);
-		sv[i].d = sv[i].d1 + sv[i].d2 + sv[i].d3;
-//		printf("%.1f	%.1f	%.1f\n", sv[i].d1, sv[i].d2, sv[i].d3);
+		// printf("%.1f	%.1f	%.1f\n", sv[i].d1, sv[i].d2, sv[i].d3);
 	}
 	printf("%d\n", n);
 }
@@ -24,22 +23,14 @@ void secondChoice(int msv) {
 	getchar();
 	gets(sv[msv].name);
 	scanf("%f%f%f", &sv[msv].d1, &sv[msv].d2, &sv[msv].d3);
-	sv[msv].d = sv[msv].d1 + sv[msv].d2 + sv[msv].d3;
 	printf("%d\n", msv);
 }
 
 void thirdChoice(int n) {
-	for (int i = 1; i <= n-1; i++) {
-		for (int j = i+1; j <= n; j++) {
-			if (sv[i].d > sv[j].d) {
-				struct sinhVien tmp = sv[i];
-				sv[i] = sv[j];
-				sv[j] = tmp;
-			}
-		}
-	}
 	for (int i = 1; i <= n; i++) {
-		printf("%d %s %.1f %.1f %.1f\n", sv[i].id, sv[i].name, sv[i].d1, sv[i].d2, sv[i].d3);
+		if (sv[i].d1 <= sv[i].d2 && sv[i].d2 <= sv[i].d3) {
+			printf("%d %s %.1f %.1f %.1f\n", sv[i].id, sv[i].name, sv[i].d1, sv[i].d2, sv[i].d3);
+		} 
 	}
 }
 
