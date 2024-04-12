@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#define es 0.000000001
 
 void swap(double *a, double *b) {
     double t = *a;
@@ -13,13 +12,6 @@ void cswap(char *a, char *b) {
     strcpy(t, a);
     strcpy(a, b);
     strcpy(b, t);
-}
-
-int check (double b[], int m) {
-    for (int i = 1; i < m; i++) {
-        if (b[0] - b[i] > es) return 0;
-    }
-    return 1;
 }
 
 void inVet(char a[][10005], double b[], int m) {
@@ -38,6 +30,7 @@ void inVet(char a[][10005], double b[], int m) {
 }
 
 void sort(char a[][10005], double b[], int m) {
+    double es = 0.000001;
     for (int i = 0; i < m-1; i++) {
         for (int j = i+1; j < m; j++) {
             if (b[i] - b[j] > es) {
@@ -66,11 +59,7 @@ void solve(char a[][10005], double b[], int m) {
             strcpy(a[i], a[i+1]);
         }
         m--;
-        if (check(b, m) == 0) {
-            inVet(a, b, m);
-            sort(a, b, m);
-        }
-        // if (m > 1) 
+        sort(a, b, m);
         inVet(a, b, m);
     }
 }
@@ -93,3 +82,4 @@ int main() {
         solve(a, b, m);
     }
 }
+// Còn 1 bước nữa là AC rồi nên tự nghĩ tiếp đi nha :>>
