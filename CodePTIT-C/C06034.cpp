@@ -1,49 +1,41 @@
 #include <stdio.h>
 #include <string.h>
 
+int vl(char c) {
+    switch (c) {
+    case 'I':
+        return 1;
+    case 'V':
+        return 5;
+    case 'X':
+        return 10;
+    case 'L':
+        return 50;
+    case 'C':
+        return 100;
+    case 'D':
+        return 500; 
+    default:
+        return 1000;
+    }
+}
+
 int main() {
-	int I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000;
-	int t;
-	scanf("%d", &t);
-	getchar();
-	while (t--) {
-		char str[1005];
-		gets(str);
-		int res = 0, sau = 0, truoc = 0;
-		for (int i = strlen(str)-1; i >= 0; i--) {
-			switch (str[i]) {
-				case 'I':
-					sau = 1;
-					break;
-				case 'V':
-					sau = 5;
-					break;
-				case 'X':
-					sau = 10;
-					break;
-				case 'L':
-					sau = 50;
-					break;
-				case 'C':
-					sau = 100;
-					break;
-				case 'D':
-					sau = 500;
-					break;
-				default :
-					sau = 1000;
-					break;
-			}
-			if (i == strlen(str)-1) {
-				res += sau;
-				truoc = sau;
-				continue;
-			}
-			// printf("%d	%d\n", truoc, sau);
-			if (truoc > sau) res -= sau;
-			else res += sau;
-			truoc = sau;
-		}
-		printf("%d\n", res);
-	}
-} 
+    int t;
+    scanf("%d", &t);
+    while (t--) {
+        char str[105];
+        scanf("%s", str);
+        int aft = 0, bf = 0, s = 0;
+        for (int i = strlen(str) - 1; i >= 0; i--) {
+            aft = vl(str[i]);
+            if (i == strlen(str) - 1) {
+                s += aft;
+            } else if (bf > aft) {
+                s -= aft;
+            } else s += aft;
+            bf = aft;
+        }
+        printf("%d\n", s);
+    }
+}

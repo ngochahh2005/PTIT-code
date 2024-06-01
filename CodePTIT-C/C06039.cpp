@@ -35,15 +35,15 @@ int main() {
                     cnt += k;
                     break;
                 }
-                printf("%s  %s  %d\n", tmp, s, k);
                 xoay(tmp);
+                // printf("%s  ", tmp);
             }
             if (k == l) {
                 check = 0;
                 break;
             }
         }
-        printf("%d\n", cnt);
+        // printf("%d\n", cnt);
         mi = min(mi, cnt);
         if (check == 0) break;
         xoay(s);

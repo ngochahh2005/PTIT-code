@@ -1,62 +1,69 @@
 #include <stdio.h>
 
-struct ps {
-	int t;
-	int m;
-} p, q;
+typedef struct phanSo{
+    int t, m;
+} ps;
 
-int ucln (int a, int b) {
-	if (a < b) {
-		int tmp = a;
-		a = b;
-		b = tmp;
-	}
-	if (b == 0) return a;
-	return ucln(b, a % b);
+int gcd(int a, int b) {
+    if (a < b) {
+        int t = a;
+        a = b;
+        b = t;
+    }
+    if (b == 0) return a;
+    return gcd(b, a%b);
 }
 
-int bcnn (int a, int b) {
-	return (a*b)/ucln(a, b);
+int lcm(int a, int b) {
+    return a/gcd(a,b)*b;
 }
 
-int main()
-{
-	int T;
-	scanf("%d", &T);
-	for (int o = 1; o <= T; o++) {
-		scanf("%d%d", &p.t, &p.m);
-		scanf("%d%d", &q.t, &q.m);
-		
-		int n = ucln(p.t, p.m);
-		p.t /= n;
-		p.m /= n;
-		
-		n = ucln(q.t, q.m);
-		q.t /= n;
-		q.m /= n;
-		
-		n = bcnn(p.m, q.m);
-		struct ps a, b, c, d;
-		a.t = p.t*n/p.m;
-		a.m = n;
-		b.t = q.t*n/q.m;
-		b.m = n;
-		
-		c.t = a.t + b.t;
-		c.m = a.m;
-		n = ucln(c.t, c.m);
-		c.t /= n;
-		c.m /= n;
-		
-		d.t = a.t*b.m;
-		d.m = a.m*b.t;
-		n = ucln(d.t, d.m);
-		d.t /= n;
-		d.m /= n; 
-		
-		printf("Case #%d:\n", o);
-		printf("%d/%d %d/%d\n", a.t, a.m, b.t, b.m);
-		printf("%d/%d\n", c.t, c.m);
-		printf("%d/%d\n", d.t, d.m);
-	}
+ps rutGon(ps p) {
+    ps tmp;
+    tmp.t = p.t / gcd(p.t, p.m);
+    tmp.m = p.m / gcd(p.t, p.m);
+    return tmp;
+}
+
+ps quyDong(ps p, ps q) {
+    ps tmp;
+    p = rutGon(p);
+    q = rutGon(q);
+    tmp.m = lcm(p.m, q.m);
+    tmp.t = p.t * (tmp.m / p.m);
+    return tmp;
+}
+
+ps tong(ps p, ps q) {
+    ps tmp;
+    tmp.t = p.t + q.t;
+    tmp.m = p.m;
+    tmp = rutGon(tmp);
+    return tmp;
+}
+
+ps thuong(ps p, ps q) {
+    ps tmp;
+    tmp.t = p.t* q.m;
+    tmp.m = q.t * p.m;
+    tmp = rutGon(tmp);
+    return tmp;
+}
+
+int main() {
+    int t;
+    ps p, q;
+    scanf("%d", &t);
+    for (int o = 1; o <= t; o++) {
+        scanf("%d %d %d %d", &p.t, &p.m, &q.t, &q.m);
+        printf("Case #%d:\n", o);
+        p = quyDong(p, q);
+        q = quyDong(q, p);
+        ps tmp;
+        tmp = tong(p, q);
+        printf("%d/%d %d/%d\n", p.t, p.m, q.t, q.m);
+        printf("%d/%d\n", tmp.t, tmp.m);
+        tmp = thuong(p, q);
+        printf("%d/%d\n", tmp.t, tmp. m);
+    }
 }
