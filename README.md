@@ -1,2 +1,3 @@
 # PTIT-code
-https://luyencode.net/problems/
+
+https://code.ptit.edu.vn/student/question
