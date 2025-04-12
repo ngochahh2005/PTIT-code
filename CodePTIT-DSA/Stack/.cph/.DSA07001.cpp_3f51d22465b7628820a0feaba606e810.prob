@@ -1,0 +1,1 @@
+{"name":"Local: DSA07001","url":"d:\\Me\\Study\\Code\\DSA\\Stack\\DSA07001.cpp","tests":[{"id":1740672756354,"input":"push 3\npush 5\nshow\npush 7\nshow\npop\npop\nshow","output":"3 5\n3 5 7\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Me\\Study\\Code\\DSA\\Stack\\DSA07001.cpp","group":"local","local":true}

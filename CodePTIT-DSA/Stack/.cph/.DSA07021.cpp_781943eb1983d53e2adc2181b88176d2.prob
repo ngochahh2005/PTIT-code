@@ -1,0 +1,1 @@
+{"name":"Local: DSA07021","url":"d:\\Me\\Study\\Code\\DSA\\Stack\\DSA07021.cpp","tests":[{"id":1743425654153,"input":"3\n((()\n)()())\n()(()))))","output":"2\n4\n6"},{"id":1743425715884,"input":"2\n(()((())\n()))()","output":"4\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Me\\Study\\Code\\DSA\\Stack\\DSA07021.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: DSA01024","url":"d:\\Me\\Study\\Code\\DSA\\Backtracking\\DSA01024.cpp","tests":[{"id":1739377635060,"input":"6 2\nDONG TAY NAM BAC TAY BAC","output":"BAC DONG\nBAC NAM\nBAC TAY\nDONG NAM\nDONG TAY\nNAM TAY"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Me\\Study\\Code\\DSA\\Backtracking\\DSA01024.cpp","group":"local","local":true}

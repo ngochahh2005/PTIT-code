@@ -1,0 +1,1 @@
+{"name":"Local: DSA02001","url":"d:\\Me\\Study\\Code\\DSA\\Backtracking\\DSA02001.cpp","tests":[{"id":1739712350633,"input":"1\n5\n1 2 3 4 5","output":"[1 2 3 4 5]\n[3 5 7 9]\n[8 12 16]\n[20 28]\n[48]"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Me\\Study\\Code\\DSA\\Backtracking\\DSA02001.cpp","group":"local","local":true}

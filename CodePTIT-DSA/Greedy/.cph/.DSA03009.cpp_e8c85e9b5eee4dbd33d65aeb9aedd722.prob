@@ -1,0 +1,1 @@
+{"name":"Local: DSA03009","url":"d:\\Me\\Study\\Code\\DSA\\Greedy\\DSA03009.cpp","tests":[{"id":1741829429718,"input":"2\n4\n1 4 20\n2 1 10\n3 1 40\n4 1 30\n5\n1 2 100\n2 1 19\n3 2 27\n4 1 25\n5 1 15","output":"2 60\n2 127"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Me\\Study\\Code\\DSA\\Greedy\\DSA03009.cpp","group":"local","local":true}

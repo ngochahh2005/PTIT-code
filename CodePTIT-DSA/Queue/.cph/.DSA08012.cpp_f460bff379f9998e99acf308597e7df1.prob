@@ -1,0 +1,1 @@
+{"name":"Local: DSA08012","url":"d:\\Me\\Study\\Code\\DSA\\Queue\\DSA08012.cpp","tests":[{"id":1743994230803,"input":"2\n4 13\n100 1000","output":"5\n100"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Me\\Study\\Code\\DSA\\Queue\\DSA08012.cpp","group":"local","local":true}

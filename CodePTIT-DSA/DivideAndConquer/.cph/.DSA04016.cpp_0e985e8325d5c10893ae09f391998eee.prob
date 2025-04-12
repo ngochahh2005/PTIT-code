@@ -1,0 +1,1 @@
+{"name":"Local: DSA04016","url":"d:\\Me\\Study\\Code\\DSA\\DivideAndConquer\\DSA04016.cpp","tests":[{"id":1742313641415,"input":"1\n5 4 5\n2 3 6 7 9\n1 4 8 10","output":"6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Me\\Study\\Code\\DSA\\DivideAndConquer\\DSA04016.cpp","group":"local","local":true}

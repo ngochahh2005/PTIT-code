@@ -1,0 +1,1 @@
+{"name":"Local: DSA07013","url":"d:\\Me\\Study\\Code\\DSA\\Stack\\DSA07013.cpp","tests":[{"id":1743415312963,"input":"2\n231*+9-\n875*+9-","output":"-4\n34"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Me\\Study\\Code\\DSA\\Stack\\DSA07013.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: DSA02005","url":"d:\\Me\\Study\\Code\\DSA\\Backtracking\\DSA02005.cpp","tests":[{"id":1740734141912,"input":"2\nAB\nABC","output":"AB BA\nABC ACB BAC BCA CAB CBA "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Me\\Study\\Code\\DSA\\Backtracking\\DSA02005.cpp","group":"local","local":true}

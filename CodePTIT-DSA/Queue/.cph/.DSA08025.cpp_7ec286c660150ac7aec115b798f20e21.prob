@@ -1,0 +1,1 @@
+{"name":"Local: DSA08025","url":"d:\\Me\\Study\\Code\\DSA\\Queue\\DSA08025.cpp","tests":[{"id":1743957367506,"input":"8\ne2 e4\na1 b2\nb2 c3\na1 h8\na1 h7\nh8 a1\nb1 c3\nf6 f6","output":"2\n4\n2\n6\n5\n6\n1\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Me\\Study\\Code\\DSA\\Queue\\DSA08025.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: DSA06041","url":"d:\\Me\\Study\\Code\\DSA\\SortAndSearch\\DSA06041.cpp","tests":[{"id":1740327939349,"input":"2\n9\n3 3 4 2 4 4 2 4 4\n8\n3 3 4 2 4 4 2 4","output":"4\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Me\\Study\\Code\\DSA\\SortAndSearch\\DSA06041.cpp","group":"local","local":true}

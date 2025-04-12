@@ -1,0 +1,1 @@
+{"name":"Local: DSA02030","url":"d:\\Me\\Study\\Code\\DSA\\Backtracking\\DSA02030.cpp","tests":[{"id":1741099911889,"input":"D 2","output":"AA\nAB\nAC\nAD\nBB\nBC\nBD\nCC\nCD\nDD"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Me\\Study\\Code\\DSA\\Backtracking\\DSA02030.cpp","group":"local","local":true}

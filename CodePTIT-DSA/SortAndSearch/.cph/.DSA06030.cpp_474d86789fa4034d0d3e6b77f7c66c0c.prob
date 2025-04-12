@@ -1,0 +1,1 @@
+{"name":"Local: DSA06030","url":"d:\\Me\\Study\\Code\\DSA\\SortAndSearch\\DSA06030.cpp","tests":[{"id":1739892251034,"input":"1\n6\n4 1 3 9 8 5","output":"Buoc 2: 1 3 4 5 8 9\nBuoc 1: 1 3 4 8 5 9"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Me\\Study\\Code\\DSA\\SortAndSearch\\DSA06030.cpp","group":"local","local":true}
