@@ -4,7 +4,7 @@
 #define lmt 1000000
 using namespace std;
 
-// Khong check euler + nhap ma tran = xau
+// Khong check lt + nhap ma tran = xau
 
 int n;
 set<int> adj[105];
